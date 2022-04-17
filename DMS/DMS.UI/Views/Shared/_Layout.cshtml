@@ -1,0 +1,498 @@
+﻿@using DMS.DAL.StaticHelper
+@using DMS.DAL.Helpers
+@{
+    var SessionInfo = SessionHelper.GetSession();
+
+}
+<!DOCTYPE html>
+<!-- Template Name: Rapido - Responsive Admin Template build with Twitter Bootstrap 3.x Version: 1.2 Author: ClipTheme -->
+<!--[if IE 8]><html class="ie8" lang="en"><![endif]-->
+<!--[if IE 9]><html class="ie9" lang="en"><![endif]-->
+<!--[if !IE]><!-->
+
+<html lang="en">
+<!--<![endif]-->
+<!-- start: HEAD -->
+
+<head>
+    <title>@ViewBag.Title</title>
+    <!-- start: META -->
+    <meta charset="utf-8" />
+    <!--[if IE]><meta http-equiv='X-UA-Compatible' content="IE=edge,IE=9,IE=8,chrome=1" /><![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta content="" name="description" />
+    <meta content="" name="author" />
+    <!-- end: META -->
+    <!-- start: MAIN CSS -->
+    <!--test Print-->
+    @* <link rel="stylesheet" type="text/css" media="print" href="print.css">*@
+
+    <!--end print-->
+    <link rel="stylesheet" href="@Url.Content("~/Content/assets/plugins/bootstrap/css/bootstrap.min.css")">
+    <link rel="stylesheet" href="@Url.Content("~/Content/assets/plugins/font-awesome/css/font-awesome.min.css")">
+    <link rel="stylesheet" href="@Url.Content("~/Content/assets/plugins/iCheck/skins/minimal/_all.css")">
+    <link rel="stylesheet" href="@Url.Content("~/Content/assets/css/styles.css")">
+
+    <link rel="stylesheet" href="@Url.Content("~/Content/assets/plugins/perfect-scrollbar/src/perfect-scrollbar.css")">
+    <link rel="stylesheet" href="@Url.Content("~/Content/assets/plugins/animate.css/animate.min.css")">
+    <!-- end: MAIN CSS -->
+    <!-- start: CSS REQUIRED FOR SUBVIEW CONTENTS -->
+    <link rel="stylesheet" href="@Url.Content("~/Content/assets/plugins/owl-carousel/owl-carousel/owl.carousel.css")">
+    <link rel="stylesheet" href="@Url.Content("~/Content/assets/plugins/owl-carousel/owl-carousel/owl.theme.css")">
+    <link rel="stylesheet" href="@Url.Content("~/Content/assets/plugins/owl-carousel/owl-carousel/owl.transitions.css")">
+    <link rel="stylesheet" href="@Url.Content("~/Content/assets/plugins/summernote/dist/summernote.css")">
+    <link rel="stylesheet" href="@Url.Content("~/Content/assets/plugins/fullcalendar/fullcalendar/fullcalendar.css")">
+
+
+    <link rel="stylesheet" href="@Url.Content("~/Content/assets/plugins/bootstrap-select/bootstrap-select.min.css")">
+    <link rel="stylesheet" href="@Url.Content("~/Content/assets/plugins/bootstrap-switch/dist/css/bootstrap3/bootstrap-switch.min.css")">
+
+    <link rel="stylesheet" href="@Url.Content("~/Content/assets/plugins/bootstrap-fileupload/bootstrap-fileupload.min.css")">
+    <link rel="stylesheet" href="@Url.Content("~/Content/assets/plugins/bootstrap-daterangepicker/daterangepicker-bs3.css")">
+    <link rel="stylesheet" href="@Url.Content("~/Content/assets/plugins/toggle/toggle.min.css")" />
+    <link rel="stylesheet" href="@Url.Content("~/Content/assets/plugins/select2/select2.min.css")" />
+
+    <link rel="stylesheet" href="@Url.Content("~/Content/assets/css/prabhucss.css")" />
+    <link rel="stylesheet" href="@Url.Content("~/Content/assets/plugins/datepicker/css/datepicker.css")" />
+
+
+    <link rel="stylesheet" href="@Url.Content("~/Content/assets/plugins/NepaliDatePick/nepali.css")" />
+    <link rel="stylesheet" href="~/Content/bootstrap-iconpicker.min.css" />
+    <!-- end: CSS REQUIRED FOR THIS SUBVIEW CONTENTS-->
+    <!-- start: CSS REQUIRED FOR THIS PAGE ONLY -->
+    <!-- end: CSS REQUIRED FOR THIS PAGE ONLY -->
+    <!-- start: CORE CSS -->
+    <link rel="stylesheet" media="print" href="@Url.Content("~/Content/assets/css/print.css")">
+    <link rel="stylesheet" href="@Url.Content("~/Content/assets/css/styles-responsive.css")">
+    <link rel="stylesheet" href="@Url.Content("~/Content/assets/css/plugins.css")">
+    <link rel="stylesheet" href="@Url.Content("~/Content/assets/plugins/DataTables/media/css/DT_bootstrap.css")">
+    <link rel="stylesheet" href="@Url.Content("~/Content/assets/plugins/DataTables/media/css/fixedHeader.dataTables.min.css")">
+    <link rel="stylesheet" href="@Url.Content("~/Content/assets/plugins/jqueryFixedHeader/table-fixed-header.css")">
+
+    <link rel="stylesheet" href="@Url.Content("~/Content/assets/css/themes/theme-style8.css")" type="text/css" id="skin_color">
+    <link rel="stylesheet" href="@Url.Content("~/Content/assets/plugins/summernote/dist/summernote.css")" type="text/css" id="skin_color">
+    <link href="~/Content/assets/css/FaijanManualToaster.css" rel="stylesheet" />
+
+    <link href="~/Content/ModalCss.css" rel="stylesheet" />
+    @* <link rel="stylesheet" href="@Url.Content("~/Content/assets/css/print.css")" type="text/css" media="print">*@
+
+    <link rel="stylesheet" href="@Url.Content("~/Content/Site.css")" type="text/css">
+
+    <link rel="stylesheet" href="@Url.Content("~/Content/assets/css/fonts/raleway/stylesheet.css")" type="text/css">
+
+    <link rel="stylesheet" href="@Url.Content("~/" + ViewHelper.TenantFile("content/css/theme.css"))" type="text/css">
+    <link href="~/Content/assets/css/password_strength/password_strength.css" rel="stylesheet" />
+    <link href="~/Content/assets/css/password_strength/style.css" rel="stylesheet" />
+
+    @Scripts.Render("~/bundles/jQuery")
+
+    <!-- end: CORE CSS -->
+    <style>
+        ul.main-navigation-menu > li > a {
+            background-color: #0061a8;
+        }
+
+        .selected {
+            background-color: green;
+        }
+
+        .bad {
+            background-color: red;
+        }
+    </style>
+
+</head>
+<!-- end: HEAD -->
+<!-- start: BODY -->
+<body class="">
+    <div id="ajaxLoaderDiv" class="hidden" style="position:fixed; top:40%; left:57%; z-index:1234;">
+        <img src="@Url.Content("~/content/assets/images/loading.gif")" />
+    </div>
+    <div id="ajaxLoaderDivBackground" class="hidden"></div>
+
+
+
+    <div class="main-wrapper">
+
+        <!-- start: PAGESLIDE LEFT -->
+        <a class="closedbar inner hidden-sm hidden-xs" href="#">
+
+        </a>
+
+        <!-- end: PAGESLIDE LEFT -->
+
+
+        <nav id="pageslide-left" class="pageslide">
+            <!--html test-->
+            <div class="navbar-content" style="height: 561px;">
+                <!-- start: SIDEBAR -->
+                <div class="main-navigation left-wrapper transition-left ps-container">
+                    <div class="navigation-toggler hidden-sm hidden-xs pull-right">
+                        <a style="margin-top:20px;" href="#main-navbar" class="sb-toggle-left" id="MenuIconLink"></a>
+                    </div><!-- start: MAIN NAVIGATION MENU -->
+                    <div class="row logo-area">
+                        <div class="text-center">
+                            <div class="col-xs-12">
+                                <a href="@Url.Action("Index", "Home")">
+                                    <img src="@Url.Content("~/" + ViewHelper.TenantFile("Content/Images/logo.jpg"))" class="img-responsive center1" style="height:140px;" />
+                                </a>
+                                <input type="text" name="q" id="menu-list-search" class="form-control" placeholder="Search..." />
+                            </div>
+                        </div>
+                    </div><!--///////////////////////////// My Side Bar Navigations /////////////////////////////////-->
+                    <ul class="main-navigation-menu" id="menu-list" style="height: 457px;">
+                        @{Html.RenderAction("CreateMenu", "Menu");}
+                    </ul><!-- end: MAIN NAVIGATION MENU -->
+                    <div class="ps-scrollbar-x-rail" style="left: 0px; bottom: 3px; width: 260px; display: none;">
+                        <div class="ps-scrollbar-x" style="left: 0px; width: 0px;"></div>
+                    </div>
+                    <div class="ps-scrollbar-y-rail" style="top: 0px; right: 3px; height: 561px; display: inherit;">
+                        <div class="ps-scrollbar-y" style="top: 0px; height: 429px;"></div>
+                    </div>
+                </div><!-- end: SIDEBAR -->
+            </div>
+        </nav>
+
+        <!-- start: PAGESLIDE RIGHT -->
+        <div id="pageslide-right" class="pageslide slide-fixed inner">
+        </div>
+        <!-- end: PAGESLIDE RIGHT -->
+        <!-- start: MAIN CONTAINER -->
+
+        <div class="main-container inner">
+            <!-- start: TOPBAR -->
+            <header class="topbar navbar navbar-inverse navbar-fixed-top inner" style="height:60px;">
+                <!-- start: TOPBAR CONTAINER -->
+                <div class="container" style="height:60px;background-color:#3d57b5;">
+                    <div class="topbar-tools">
+                        <!-- start: TOP NAVIGATION MENU -->
+                        <ul class="nav navbar-right">@Html.Partial("_LoginPartial")</ul>
+                        <!-- end: TOP NAVIGATION MENU -->
+                    </div>
+
+                    <div class="topbar-tools hidden-sm hidden-md" style="float:left; margin-top:5px;">
+                        <div style="margin-top:10px; width:auto">
+                            @*@if ((SessionInfo.EmployeeTypes != null && SessionInfo.EmployeeTypes.Contains("LoanInitiator")) || SessionInfo.IsSuperAdmin)
+                                {
+                                <a href="@Url.Action("Create", "LoanRequest")" class="btn btn-primary"><i class="fa fa-plus"></i> New Loan Request</a>
+                                }
+                                <a href="@Url.Action("Index","LoanProcessing")" class="btn btn-danger"> <i class="fa fa-list"></i> Pending Loan Request
+                                <span class="badge PendingCount"></span>
+                                </a>*@
+
+                        </div>
+                    </div>
+
+                </div>
+                <!-- end: TOPBAR CONTAINER -->
+            </header>
+            <!-- end: TOPBAR -->
+            <!-- start: PAGE -->
+            <div class="main-content" id="ajax-content">
+
+                @RenderBody()
+            </div>
+        </div>
+
+
+        <!-- end: PAGE -->
+    </div>
+    <!-- end: MAIN CONTAINER -->
+    <!-- start: FOOTER -->
+    <footer class="inner">
+        <div class="footer-inner">
+            <div class="pull-left">
+                @DateTime.Now.Year &copy; Main Project
+            </div>
+            <div class="pull-right text-right">
+                <span class="go-top pull-right"><i class="fa fa-chevron-up"></i></span>
+            </div>
+        </div>
+    </footer>
+    <!-- end: FOOTER -->
+
+    <script src="@Url.Content("~/Content/assets/plugins/jquery-ui/jquery-ui-1.10.2.custom.min.js")"></script>
+    <script src="@Url.Content("~/Content/assets/plugins/bootstrap/js/bootstrap.min.js")"></script>
+    <script src="@Url.Content("~/Content/assets/plugins/blockUI/jquery.blockUI.js")"></script>
+    <script src="@Url.Content("~/Content/assets/plugins/iCheck/jquery.icheck.min.js")"></script>
+    <script src="@Url.Content("~/Content/assets/plugins/moment/min/moment.min.js")"></script>
+    <script src="@Url.Content("~/Content/assets/plugins/perfect-scrollbar/src/jquery.mousewheel.js")"></script>
+    <script src="@Url.Content("~/Content/assets/plugins/perfect-scrollbar/src/perfect-scrollbar.js")"></script>
+    <script src="@Url.Content("~/Content/assets/plugins/bootbox/bootbox.min.js")"></script>
+    <script src="@Url.Content("~/Content/assets/plugins/jquery.scrollTo/jquery.scrollTo.min.js")"></script>
+    <script src="@Url.Content("~/Content/assets/plugins/ScrollToFixed/jquery-scrolltofixed-min.js")"></script>
+    <script src="@Url.Content("~/Content/assets/plugins/jquery.appear/jquery.appear.js")"></script>
+    <script src="@Url.Content("~/Content/assets/plugins/jquery-cookie/jquery.cookie.js")"></script>
+    <script src="@Url.Content("~/Content/assets/plugins/velocity/jquery.velocity.min.js")"></script>
+    <script src="@Url.Content("~/Content/assets/plugins/TouchSwipe/jquery.touchSwipe.min.js")"></script>
+    <!-- end: MAIN JAVASCRIPTS -->
+    <!-- start: JAVASCRIPTS REQUIRED FOR SUBVIEW CONTENTS -->
+    <script src="@Url.Content("~/Content/assets/plugins/owl-carousel/owl-carousel/owl.carousel.js")"></script>
+    <script src="@Url.Content("~/Content/assets/plugins/jquery-mockjax/jquery.mockjax.js")"></script>
+
+
+    <script src="@Url.Content("~/Content/assets/plugins/fullcalendar/fullcalendar/fullcalendar.min.js")"></script>
+    <script src="@Url.Content("~/Content/assets/plugins/bootstrap-switch/dist/js/bootstrap-switch.min.js")"></script>
+    <script src="@Url.Content("~/Content/assets/plugins/jquery.validate.min.js")"></script>
+    <script src="@Url.Content("~/Content/assets/plugins/bootstrap-fileupload/bootstrap-fileupload.min.js")"></script>
+    <script src="@Url.Content("~/Content/assets/plugins/DataTables/media/js/jquery.dataTables.min.js")"></script>
+    <script src="@Url.Content("~/Content/assets/plugins/DataTables/media/js/dataTables.fixedHeader.min.js")"></script>
+    <script src="@Url.Content("~/Content/assets/plugins/toggle/toggle.min.js")"></script>
+    <script src="@Url.Content("~/Content/assets/plugins/truncate/jquery.truncate.js")"></script>
+    <script src="@Url.Content("~/Content/assets/plugins/bootstrap-daterangepicker/daterangepicker.js")"></script>
+    <script src="@Url.Content("~/Content/assets/plugins/bootstrap-datepicker/js/bootstrap-datepicker.js")"></script>
+    <script src="@Url.Content("~/Content/assets/plugins/NepaliDatePick/nepali.datepicker.v2.1.min.js")"></script>
+    <script src="@Url.Content("~/Content/assets/plugins/summernote/dist/summernote.min.js")"></script>
+    <script src="@Url.Content("~/Content/assets/plugins/jquery-ui/jquery-ui-1.10.2.custom.min.js")"></script>
+    <script src="@Url.Content("~/Content/assets/plugins/jqueryFixedHeader/table-fixed-header.js")"></script>
+    <script src="@Url.Content("~/Content/assets/plugins/bootstrap-progressbar/bootstrap-progressbar.min.js")"></script>
+    <script src="@Url.Content("~/Content/assets/plugins/nvd3/lib/d3.v3.js")"></script>
+    <script src="@Url.Content("~/Content/assets/plugins/nvd3/nv.d3.min.js")"></script>
+
+
+    <script src="~/Content/assets/plugins/select2/select2helper.js"></script>
+    <script src="~/Content/assets/plugins/select2/select2.min.js"></script>
+    <script src="~/Content/assets/plugins/select2/en.js"></script>
+
+    <script src="@Url.Content("~/Scripts/form-wizard.js")"></script>
+    <script src="@Url.Content("~/Scripts/jquery.smartWizard.js")"></script>
+    <script src="@Url.Content("~/Content/assets/js/table-data.js")"></script>
+    <script src="@Url.Content("~/Content/assets/plugins/tableExport/tableExport.js")"></script>
+    <script src="@Url.Content("~/Content/assets/plugins/tableExport/jquery.base64.js")"></script>
+    <script src="@Url.Content("~/Content/assets/plugins/tableExport/html2canvas.js")"></script>
+    <script src="@Url.Content("~/Content/assets/plugins/sweetalert/lib/sweet-alert.min.js")"></script>
+    <script src="@Url.Content("~/Content/assets/plugins/tableExport/jspdf/libs/sprintf.js")"></script>
+    <script src="@Url.Content("~/Content/assets/plugins/tableExport/jspdf/jspdf.js")"></script>
+    <script src="@Url.Content("~/Content/assets/plugins/tableExport/jspdf/libs/base64.js")"></script>
+    <script src="@Url.Content("~/Content/assets/js/table-export.js")"></script>
+    <script src="@Url.Content("~/Content/assets/js/ui-modals.js")"></script>
+    <script src="@Url.Content("~/Content/assets/js/main.js")"></script>
+    <script src="@Url.Content("~/Content/assets/js/jquery.searchable-1.0.0.min.js")"></script>
+    <script src="@Url.Content("~/Scripts/startup.js?v=20210709")"></script>
+    <script src="@Url.Content("~/Scripts/CardRequest/CommonJS.js?v=20210709")"></script>
+
+    <!-- end: CORE JAVASCRIPTS  -->
+    <!--DMS-->
+    <link href="~/Content/dropzone.css" rel="stylesheet" />
+    <script src="~/Scripts/DMS/Miscellaneous.js"></script>
+    <script src="~/Scripts/DMS/dropzone.js"></script>
+    <script src="~/Scripts/bootstrap-timepicker.min.js"></script>
+    <script src="~/Scripts/IconPicker/bootstrap-iconpicker.min.js"></script>
+    <script src="~/Scripts/ToasterNotification/jquery.toaster.js"></script>
+    <script src="~/Scripts/TableEdit/jquery.tabledit.js"></script>
+    <script src="~/Scripts/PrintThis/printThis.js"></script>
+    <script src="~/Scripts/nepali.datepicker.v2.2/nepali.datepicker.v2.2.min.js"></script>
+    <script src="~/Scripts/DMS/ImageUpload.js"></script>
+    <script src="~/Content/assets/js/FaijanManualToaster.js"></script>
+    <!--DMS-->
+    <script src="@Url.Action("Config","JavaScript")"></script>
+
+    <link href="~/Content/DataTables/css/buttons.dataTables.min.css" rel="stylesheet" />
+    <link href="~/Content/DataTables/css/jquery.dataTables.min.css" rel="stylesheet" />
+    <script src="@Url.Content("~/Scripts/DataTables/jquery.dataTables.min.js")"></script>
+    <script src="@Url.Content("~/Scripts/DataTables/dataTables.buttons.min.js")"></script>
+    <script src="@Url.Content("~/Scripts/DataTables/buttons.flash.min.js")"></script>
+    <script src="@Url.Content("~/Scripts/DataTables/jszip.min.js")"></script>
+    <script src="@Url.Content("~/Scripts/DataTables/buttons.html5.min.js")"></script>
+    <script src="@Url.Content("~/Scripts/DataTables/buttons.print.min.js")"></script>
+    @*for password strength*@
+    <script src="~/Scripts/password_strength.js"></script>
+    <script src="~/Scripts/password_strength_lightweight.js"></script>
+
+    <script>
+        $(document).ready(function ($) {
+            $('#myPassword').strength_meter();
+        });
+    </script>
+
+    <script>
+        $(document).ready(function (e) {
+            $('.main-navigation-menu a[href="#"]').each(function (item, index) {
+                var hasIcon = $(this).find('.fa');
+                if (hasIcon.length == 0) { $(this).prepend('<i class="fa fa-folder"></a>'); }
+            });
+            $('.main-navigation-menu a[href!="#"]').each(function (item, index) {
+                var hasIcon = $(this).find('.fa');
+                if (hasIcon.length == 0) { $(this).prepend('<i class="fa fa-list"></a>'); }
+            });
+        });
+    </script>
+
+
+    <script>
+        function ReApplyDataTable($selector) {
+            $selector = $selector || '.dataTable';
+            oTable = $($selector).dataTable({
+                "aoColumnDefs": [{
+                    //"aTargets": [0]
+                }],
+                "oLanguage": {
+                    "sLengthMenu": "Show _MENU_ Rows",
+                    "sSearch": "",
+                    "oPaginate": {
+                        "sPrevious": "",
+                        "sNext": ""
+                    }
+                },
+                "aaSorting": [[0, 'asc']],
+                // set the initial value
+                "iDisplayLength": 100,
+                "lengthMenu": [[10, 25, 50, 100, 500], [10, 25, 50, 100, 500]],
+                fixedHeader: true,
+                //for excel print
+                dom: 'Blfrtip',
+                buttons: [{
+                    extend: 'excelHtml5',
+                    customizeData: function (data) {
+                        for (var i = 0; i < data.body.length; i++) {
+                            for (var j = 0; j < data.body[i].length; j++) {
+                                data.body[i][j] = '\u200C' + data.body[i][j];
+                            }
+                        }
+                    },
+                    orientation: 'landscape'
+                }]
+            });
+            $('.dataTables_wrapper .dataTables_filter input').addClass("form-control input-sm").attr("placeholder", "Search");
+        }
+        var oTable;
+        $(document).ready(function () {
+            Main.init();
+            TableExport.init();
+            //UIModals.init();
+            // console.log('init...');
+            ReApplyDataTable();
+
+            $('.nepali-calendar').attr('readonly', 'readonly').nepaliDatePicker({
+
+                format: "yyyy-mm-dd",
+                npdMonth: true,
+                npdYear: true,
+                npdYearCount: 50
+            });
+            applySelect();
+
+            //$('#cmdPrint, .cmdPrint').on('click', function (e) {
+            //    e.preventDefault();
+            //    window.print();
+            //});
+            $('#NepDate').on('mouseover', function (e) {
+                e.preventDefault();
+
+                $("#EngDate").toggle();
+
+            });
+            $('#NepDate').on('mouseout', function (e) {
+                e.preventDefault();
+
+                $("#EngDate").toggle();
+
+            });
+
+
+
+            $('.summernote').each(function () {
+                var _thisNote = $(this);
+                $(this).summernote({
+                    height: 300,
+                    tabsize: 2,
+                    oninit: function () {
+                        if (_thisNote.code() == "" || _thisNote.code().replace(/(<([^>]+)>)/ig, "") == "") {
+                            _thisNote.code(_thisNote.attr("placeholder"));
+                        }
+                    },
+                    onfocus: function (e) {
+                        if (_thisNote.code() == _thisNote.attr("placeholder")) {
+                            _thisNote.code("");
+                        }
+                    },
+                    onblur: function (e) {
+                        if (_thisNote.code() == "" || _thisNote.code().replace(/(<([^>]+)>)/ig, "") == "") {
+                            _thisNote.code(_thisNote.attr("placeholder"));
+                        }
+                    }
+                });
+            });
+
+        });
+
+    </script>
+
+    @RenderSection("Scripts", false)
+
+    <script>
+        $.validator.setDefaults({
+            ignore: ""
+        });
+
+        //for menu
+        $(document).ready(function () {
+            // Code for Current Active Page to open node at left
+
+            var hjref = $(location).attr('href');
+            // console.log("Current Address of Active page" + hjref);
+            var pathname = $(location).attr('pathname');
+            //console.log("Current Path of Active page" + pathname);
+
+            $found = false;
+            $('.sub-menu li a').each(function (e) {
+                var hrefl = $(this).attr('href');
+                if (pathname == hrefl && $found == false) {
+                    $found = true;
+                    $(this).addClass("active");
+
+                    $parent = $(this).parents('li');
+                    $parent = $($parent.get().reverse());
+                    $parent.each(function () {
+                        console.log($(this));
+                        //$(this).find('> a').trigger('click'); //.addClass('open')
+                        $(this).addClass('open').children('ul').slideDown(5, function () {
+                            if (mainNavigation.height() > $(".main-navigation-menu").outerHeight()) {
+                                mainNavigation.scrollTo(0, 5, {
+                                    onAfter: function () {
+                                        if ($body.hasClass("isMobile") == false) {
+                                            mainNavigation.perfectScrollbar('update');
+                                        }
+                                    }
+                                });
+                            } else {
+                                mainNavigation.scrollTo($(this).parent("li"), 5, {
+                                    onAfter: function () {
+                                        if ($body.hasClass("isMobile") == false) {
+                                            mainNavigation.perfectScrollbar('update');
+                                        }
+                                    }
+                                });
+                            }
+                        });
+                    })
+                }
+            });
+
+            var openMenu = "@ViewBag.MenuID";
+            console.log(openMenu);
+
+            $('.trigOnLoad').each(function (item, index) {
+                $(this).trigger('click');
+            });
+        });
+        $(document).ready(function () {
+            $('.table-fixed-header').fixedHeader();
+        });
+
+
+        $('.datepicker').attr('readonly', 'readonly').datepicker({
+            format: 'yyyy-mm-dd',
+            //"setDate": new Date(),
+            "autoclose": true
+            //startDate: '-3d'
+        });
+       //.datepicker("setDate", '1d');
+    </script>
+
+</body>
+<!-- end: BODY -->
+
+</html>
