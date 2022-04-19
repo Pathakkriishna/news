@@ -11,7 +11,6 @@
         <EntityTypeShape EntityType="BIT4thSemModel.des01designations" Width="1.5" PointX="0.75" PointY="12.125" />
         <EntityTypeShape EntityType="BIT4thSemModel.emp01employee" Width="1.5" PointX="3" PointY="1.125" />
         <EntityTypeShape EntityType="BIT4thSemModel.lvl01employee_levels" Width="1.5" PointX="0.75" PointY="16.5" />
-        <EntityTypeShape EntityType="BIT4thSemModel.tbl_employee" Width="1.5" PointX="7.75" PointY="0.75" />
         <EntityTypeShape EntityType="BIT4thSemModel.UserCode" Width="1.5" PointX="2.75" PointY="7.75" />
         <EntityTypeShape EntityType="BIT4thSemModel.usr05users" Width="1.5" PointX="5.25" PointY="2.25" />
         <AssociationConnector Association="BIT4thSemModel.FK_emp01employee_bra01branches" />

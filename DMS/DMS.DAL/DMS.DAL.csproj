@@ -158,9 +158,6 @@
     </Compile>
     <Compile Include="DatabaseContext\MetaData\EmployeeMD.cs" />
     <Compile Include="DatabaseContext\PartialClasses.cs" />
-    <Compile Include="DatabaseContext\tbl_employee.cs">
-      <DependentUpon>MainModel.tt</DependentUpon>
-    </Compile>
     <Compile Include="DatabaseContext\UserCode.cs">
       <DependentUpon>MainModel.tt</DependentUpon>
     </Compile>

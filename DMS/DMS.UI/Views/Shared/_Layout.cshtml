@@ -1,498 +1,369 @@
-﻿@using DMS.DAL.StaticHelper
-@using DMS.DAL.Helpers
-@{
-    var SessionInfo = SessionHelper.GetSession();
-
-}
+﻿<!--
+Author: W3layouts
+Author URL: http://w3layouts.com
+-->
 <!DOCTYPE html>
-<!-- Template Name: Rapido - Responsive Admin Template build with Twitter Bootstrap 3.x Version: 1.2 Author: ClipTheme -->
-<!--[if IE 8]><html class="ie8" lang="en"><![endif]-->
-<!--[if IE 9]><html class="ie9" lang="en"><![endif]-->
-<!--[if !IE]><!-->
-
-<html lang="en">
-<!--<![endif]-->
-<!-- start: HEAD -->
+<html lang="zxx">
 
 <head>
-    <title>@ViewBag.Title</title>
-    <!-- start: META -->
-    <meta charset="utf-8" />
-    <!--[if IE]><meta http-equiv='X-UA-Compatible' content="IE=edge,IE=9,IE=8,chrome=1" /><![endif]-->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black">
-    <meta content="" name="description" />
-    <meta content="" name="author" />
-    <!-- end: META -->
-    <!-- start: MAIN CSS -->
-    <!--test Print-->
-    @* <link rel="stylesheet" type="text/css" media="print" href="print.css">*@
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title> Webzine Entertainment & Blog Category Responsive Website Template | Home </title>
+    <!-- Template CSS -->
+    <link rel="stylesheet" href="~/Content/news_portal/css/style-starter.css">
+    <!-- Template CSS -->
+    <link href="//fonts.googleapis.com/css?family=Playfair+Display:400,400i,700&display=swap" rel="stylesheet">
+    <link href="//fonts.googleapis.com/css?family=Montserrat:300,300i,400,600,700,800&display=swap" rel="stylesheet">
+    <!-- Template CSS -->
 
-    <!--end print-->
-    <link rel="stylesheet" href="@Url.Content("~/Content/assets/plugins/bootstrap/css/bootstrap.min.css")">
-    <link rel="stylesheet" href="@Url.Content("~/Content/assets/plugins/font-awesome/css/font-awesome.min.css")">
-    <link rel="stylesheet" href="@Url.Content("~/Content/assets/plugins/iCheck/skins/minimal/_all.css")">
-    <link rel="stylesheet" href="@Url.Content("~/Content/assets/css/styles.css")">
-
-    <link rel="stylesheet" href="@Url.Content("~/Content/assets/plugins/perfect-scrollbar/src/perfect-scrollbar.css")">
-    <link rel="stylesheet" href="@Url.Content("~/Content/assets/plugins/animate.css/animate.min.css")">
-    <!-- end: MAIN CSS -->
-    <!-- start: CSS REQUIRED FOR SUBVIEW CONTENTS -->
-    <link rel="stylesheet" href="@Url.Content("~/Content/assets/plugins/owl-carousel/owl-carousel/owl.carousel.css")">
-    <link rel="stylesheet" href="@Url.Content("~/Content/assets/plugins/owl-carousel/owl-carousel/owl.theme.css")">
-    <link rel="stylesheet" href="@Url.Content("~/Content/assets/plugins/owl-carousel/owl-carousel/owl.transitions.css")">
-    <link rel="stylesheet" href="@Url.Content("~/Content/assets/plugins/summernote/dist/summernote.css")">
-    <link rel="stylesheet" href="@Url.Content("~/Content/assets/plugins/fullcalendar/fullcalendar/fullcalendar.css")">
-
-
-    <link rel="stylesheet" href="@Url.Content("~/Content/assets/plugins/bootstrap-select/bootstrap-select.min.css")">
-    <link rel="stylesheet" href="@Url.Content("~/Content/assets/plugins/bootstrap-switch/dist/css/bootstrap3/bootstrap-switch.min.css")">
-
-    <link rel="stylesheet" href="@Url.Content("~/Content/assets/plugins/bootstrap-fileupload/bootstrap-fileupload.min.css")">
-    <link rel="stylesheet" href="@Url.Content("~/Content/assets/plugins/bootstrap-daterangepicker/daterangepicker-bs3.css")">
-    <link rel="stylesheet" href="@Url.Content("~/Content/assets/plugins/toggle/toggle.min.css")" />
-    <link rel="stylesheet" href="@Url.Content("~/Content/assets/plugins/select2/select2.min.css")" />
-
-    <link rel="stylesheet" href="@Url.Content("~/Content/assets/css/prabhucss.css")" />
-    <link rel="stylesheet" href="@Url.Content("~/Content/assets/plugins/datepicker/css/datepicker.css")" />
-
-
-    <link rel="stylesheet" href="@Url.Content("~/Content/assets/plugins/NepaliDatePick/nepali.css")" />
-    <link rel="stylesheet" href="~/Content/bootstrap-iconpicker.min.css" />
-    <!-- end: CSS REQUIRED FOR THIS SUBVIEW CONTENTS-->
-    <!-- start: CSS REQUIRED FOR THIS PAGE ONLY -->
-    <!-- end: CSS REQUIRED FOR THIS PAGE ONLY -->
-    <!-- start: CORE CSS -->
-    <link rel="stylesheet" media="print" href="@Url.Content("~/Content/assets/css/print.css")">
-    <link rel="stylesheet" href="@Url.Content("~/Content/assets/css/styles-responsive.css")">
-    <link rel="stylesheet" href="@Url.Content("~/Content/assets/css/plugins.css")">
-    <link rel="stylesheet" href="@Url.Content("~/Content/assets/plugins/DataTables/media/css/DT_bootstrap.css")">
-    <link rel="stylesheet" href="@Url.Content("~/Content/assets/plugins/DataTables/media/css/fixedHeader.dataTables.min.css")">
-    <link rel="stylesheet" href="@Url.Content("~/Content/assets/plugins/jqueryFixedHeader/table-fixed-header.css")">
-
-    <link rel="stylesheet" href="@Url.Content("~/Content/assets/css/themes/theme-style8.css")" type="text/css" id="skin_color">
-    <link rel="stylesheet" href="@Url.Content("~/Content/assets/plugins/summernote/dist/summernote.css")" type="text/css" id="skin_color">
-    <link href="~/Content/assets/css/FaijanManualToaster.css" rel="stylesheet" />
-
-    <link href="~/Content/ModalCss.css" rel="stylesheet" />
-    @* <link rel="stylesheet" href="@Url.Content("~/Content/assets/css/print.css")" type="text/css" media="print">*@
-
-    <link rel="stylesheet" href="@Url.Content("~/Content/Site.css")" type="text/css">
-
-    <link rel="stylesheet" href="@Url.Content("~/Content/assets/css/fonts/raleway/stylesheet.css")" type="text/css">
-
-    <link rel="stylesheet" href="@Url.Content("~/" + ViewHelper.TenantFile("content/css/theme.css"))" type="text/css">
-    <link href="~/Content/assets/css/password_strength/password_strength.css" rel="stylesheet" />
-    <link href="~/Content/assets/css/password_strength/style.css" rel="stylesheet" />
-
-    @Scripts.Render("~/bundles/jQuery")
-
-    <!-- end: CORE CSS -->
-    <style>
-        ul.main-navigation-menu > li > a {
-            background-color: #0061a8;
-        }
-
-        .selected {
-            background-color: green;
-        }
-
-        .bad {
-            background-color: red;
-        }
-    </style>
 
 </head>
-<!-- end: HEAD -->
-<!-- start: BODY -->
-<body class="">
-    <div id="ajaxLoaderDiv" class="hidden" style="position:fixed; top:40%; left:57%; z-index:1234;">
-        <img src="@Url.Content("~/content/assets/images/loading.gif")" />
-    </div>
-    <div id="ajaxLoaderDivBackground" class="hidden"></div>
 
-
-
-    <div class="main-wrapper">
-
-        <!-- start: PAGESLIDE LEFT -->
-        <a class="closedbar inner hidden-sm hidden-xs" href="#">
-
-        </a>
-
-        <!-- end: PAGESLIDE LEFT -->
-
-
-        <nav id="pageslide-left" class="pageslide">
-            <!--html test-->
-            <div class="navbar-content" style="height: 561px;">
-                <!-- start: SIDEBAR -->
-                <div class="main-navigation left-wrapper transition-left ps-container">
-                    <div class="navigation-toggler hidden-sm hidden-xs pull-right">
-                        <a style="margin-top:20px;" href="#main-navbar" class="sb-toggle-left" id="MenuIconLink"></a>
-                    </div><!-- start: MAIN NAVIGATION MENU -->
-                    <div class="row logo-area">
-                        <div class="text-center">
-                            <div class="col-xs-12">
-                                <a href="@Url.Action("Index", "Home")">
-                                    <img src="@Url.Content("~/" + ViewHelper.TenantFile("Content/Images/logo.jpg"))" class="img-responsive center1" style="height:140px;" />
+<body>
+    <section class="w3l-header-6-main mobile-header">
+        <div class="header-section-hny">
+            <div class="header-top">
+                <div class="container">
+                    <!-- /header-top-inn-->
+                    <div class="header-inn-top row">
+                        <div class="logo-brand col-6">
+                            <a class="navbar-brand" href="index.html">
+                                <img src="assets/images/logo.png" alt="" title="Webzine" style="max-height:30px;width:100%;" />
+                            </a>
+                        </div>
+                        <div class="menu-overlay-left col-6 ml-auto">
+                            <div class="two-pops d-flex">
+                                <a href="#" class="author-user">
+                                    <span class="fa fa-user"
+                                          aria-hidden="true"></span>
                                 </a>
-                                <input type="text" name="q" id="menu-list-search" class="form-control" placeholder="Search..." />
+
+
+                                <!-- overlay-menuv-menu -->
+                                <div class="overlay-menuv-hny">
+                                    <input type="checkbox" id="op"></input>
+                                    <div class="side-menu-hny">
+                                        <label for="op" class="menuopen">
+                                            <span class="fa fa-bars" aria-hidden="true"></span>
+                                        </label>
+                                    </div>
+                                    <div class="overlay-menuv overlay-menuv-hugeinc">
+                                        <label for="op" class="menuclose">
+                                            <span class="fa fa-times"
+                                                  aria-hidden="true"></span>
+                                        </label>
+                                        <div class="side-show-content text-left">
+
+                                            <div class="quick-links-side gap-top">
+                                                <h3 class="side-title">About Webzine</h3>
+                                                <p>
+                                                    Lorem ipsum dolor sit amet, adipi scingelit. Vestibulum orci justo,
+                                                    vehicula vel sapien sit amet.
+                                                </p>
+
+                                            </div>
+
+                                            <div class="quick-links-side gap-top">
+                                                <h3 class="side-title">Top Authors</h3>
+                                                <ul>
+                                                    <li><a href="#">John Smith</a></li>
+                                                    <li><a href="#">Jackson</a></li>
+                                                    <li><a href="#">Lucas Smith</a></li>
+                                                    <li><a href="#">Daniel Doe</a></li>
+                                                </ul>
+                                            </div>
+                                            <div class="quick-links-side gap-top">
+                                                <h3 class="side-title">Categories</h3>
+                                                <ul>
+                                                    <li><a href="index.html">Home</a></li>
+                                                    <li><a href="lifestyle.html">Lifestyle</a></li>
+                                                    <li><a href="contact.html">Contact Us</a></li>
+                                                    <li><a href="#">Author</a></li>
+                                                </ul>
+                                            </div>
+                                            <div class="quick-links-side follow-us gap-top">
+                                                <h3 class="side-title">Follow Us</h3>
+                                                <ul class="social-icons-top">
+                                                    <li>
+                                                        <a class="facebook" href="#">
+                                                            <span class="fa fa-facebook"
+                                                                  aria-hidden="true"></span>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a class="twitter" href="#">
+                                                            <span class="fa fa-twitter"
+                                                                  aria-hidden="true"></span>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a class="google" href="#">
+                                                            <span class="fa fa-google-plus"
+                                                                  aria-hidden="true"></span>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a class="instagram" href="#">
+                                                            <span class="fa fa-instagram"
+                                                                  aria-hidden="true"></span>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                                <div class="search-right">
+
+                                    <a href="#search" title="search">
+                                        <span class="fa fa-search"
+                                              aria-hidden="true"></span>
+                                    </a>
+                                    <!-- search popup -->
+
+
+                                    <div id="search" class="pop-overlay">
+                                        <div class="popup">
+
+                                            <form action="#" method="post" class="search-box">
+                                                <input type="search" placeholder="Keyword" name="search" required="required"
+                                                       autofocus="">
+                                                <button type="submit" class="btn mt-3">Search</button>
+                                            </form>
+
+                                        </div>
+
+                                        <a class="close" href="#">×</a>
+                                    </div>
+                                    <!-- /search popup -->
+                                </div>
+                            </div>
+                            <!-- overlay-menuv-menu -->
+                        </div>
+                    </div>
+                    <!-- //header-top-inn-->
+                </div>
+            </div>
+            <header class="header-hny-block">
+                <div class="container">
+                    <!-- /.nav-collapse -->
+                    <nav class="navbar navbar-expand-lg navbar-light">
+
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarNav">
+                            <ul class="navbar-nav mr-lg-auto">
+
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                       data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        Home
+                                    </a>
+                                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                        <a class="dropdown-item" href="index.html">Home</a>
+                                        <a class="dropdown-item" href="home-1.html">Home V1</a>
+                                    </div>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="lifestyle.html">Lifestyle</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Food</a>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a class="nav-link" href="contact.html">Contact</a>
+                                </li>
+                            </ul>
+                            <div class="social-right">
+                                <ul class="social-icons-top">
+                                    <li>
+                                        <a class="facebook" href="#">
+                                            <span class="fa fa-facebook"
+                                                  aria-hidden="true"></span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="twitter" href="#">
+                                            <span class="fa fa-twitter"
+                                                  aria-hidden="true"></span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="google" href="#">
+                                            <span class="fa fa-google-plus"
+                                                  aria-hidden="true"></span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="instagram" href="#">
+                                            <span class="fa fa-instagram"
+                                                  aria-hidden="true"></span>
+                                        </a>
+                                    </li>
+                                </ul>
                             </div>
                         </div>
-                    </div><!--///////////////////////////// My Side Bar Navigations /////////////////////////////////-->
-                    <ul class="main-navigation-menu" id="menu-list" style="height: 457px;">
-                        @{Html.RenderAction("CreateMenu", "Menu");}
-                    </ul><!-- end: MAIN NAVIGATION MENU -->
-                    <div class="ps-scrollbar-x-rail" style="left: 0px; bottom: 3px; width: 260px; display: none;">
-                        <div class="ps-scrollbar-x" style="left: 0px; width: 0px;"></div>
-                    </div>
-                    <div class="ps-scrollbar-y-rail" style="top: 0px; right: 3px; height: 561px; display: inherit;">
-                        <div class="ps-scrollbar-y" style="top: 0px; height: 429px;"></div>
-                    </div>
-                </div><!-- end: SIDEBAR -->
-            </div>
-        </nav>
+                    </nav>
 
-        <!-- start: PAGESLIDE RIGHT -->
-        <div id="pageslide-right" class="pageslide slide-fixed inner">
+                    <!-- /.nav-collapse -->
+            </header>
         </div>
-        <!-- end: PAGESLIDE RIGHT -->
-        <!-- start: MAIN CONTAINER -->
+    </section>
 
-        <div class="main-container inner">
-            <!-- start: TOPBAR -->
-            <header class="topbar navbar navbar-inverse navbar-fixed-top inner" style="height:60px;">
-                <!-- start: TOPBAR CONTAINER -->
-                <div class="container" style="height:60px;background-color:#3d57b5;">
-                    <div class="topbar-tools">
-                        <!-- start: TOP NAVIGATION MENU -->
-                        <ul class="nav navbar-right">@Html.Partial("_LoginPartial")</ul>
-                        <!-- end: TOP NAVIGATION MENU -->
-                    </div>
 
-                    <div class="topbar-tools hidden-sm hidden-md" style="float:left; margin-top:5px;">
-                        <div style="margin-top:10px; width:auto">
-                            @*@if ((SessionInfo.EmployeeTypes != null && SessionInfo.EmployeeTypes.Contains("LoanInitiator")) || SessionInfo.IsSuperAdmin)
-                                {
-                                <a href="@Url.Action("Create", "LoanRequest")" class="btn btn-primary"><i class="fa fa-plus"></i> New Loan Request</a>
-                                }
-                                <a href="@Url.Action("Index","LoanProcessing")" class="btn btn-danger"> <i class="fa fa-list"></i> Pending Loan Request
-                                <span class="badge PendingCount"></span>
-                                </a>*@
+    @RenderBody()
+    <!-- /footer start-->
+    <footer class="w3l-footer-66">
+        <section class="footer-inner-main py-md-5 py-5">
+            <div class="container">
+                <div class="footer-top row">
+                    <div class="sub-one-left col-lg-4 col-md-6">
+                        <h6>About Webzine</h6>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                            laboris.
+                        </p>
+                        <div class="columns-2">
+                            <ul class="social-footer">
+                                <li>
+                                    <a href="#facebook"><span class="fa fa-facebook" aria-hidden="true"></span></a>
+                                </li>
+                                <li>
+                                    <a href="#linkedin"><span class="fa fa-linkedin" aria-hidden="true"></span></a>
+                                </li>
+                                <li>
+                                    <a href="#twitter"><span class="fa fa-twitter" aria-hidden="true"></span></a>
+                                </li>
+                                <li>
+                                    <a href="#google"><span class="fa fa-google-plus" aria-hidden="true"></span></a>
+                                </li>
 
+                            </ul>
                         </div>
                     </div>
+                    <div class="sub-two-right col-lg-4 col-md-6 my-md-0 my-5">
+                        <h6>Editor Pics</h6>
+                        <div class="row editor-pics mb-3">
+                            <div class="col-3 item-pic">
+                                <img src="assets/images/m4.jpg" class="img-fluid" alt="">
 
+                            </div>
+                            <div class="col-9 item-details">
+                                <a href="#">
+                                    <h5 class="inner">
+                                        More Than 120 ER Visits Linked To Synthetic WordPress In
+                                        NYC...
+                                    </h5>
+                                </a>
+                                <div class="td-post-date">Jan 22, 2019</div>
+                            </div>
+
+                        </div>
+                        <div class="row editor-pics mb-3">
+                            <div class="col-3 item-pic">
+                                <img src="assets/images/m1.jpg" class="img-fluid" alt="">
+
+                            </div>
+                            <div class="col-9 item-details">
+                                <a href="#">
+                                    <h5 class="inner">
+                                        More Than 120 ER Visits Linked To Synthetic WordPress In
+                                        NYC...
+                                    </h5>
+                                </a>
+                                <div class="td-post-date">Jan 22, 2019</div>
+                            </div>
+
+                        </div>
+                        <div class="row editor-pics mb-3">
+                            <div class="col-3 item-pic">
+                                <img src="assets/images/m3.jpg" class="img-fluid" alt="">
+
+                            </div>
+                            <div class="col-9 item-details">
+                                <a href="#">
+                                    <h5 class="inner">
+                                        More Than 120 ER Visits Linked To Synthetic WordPress In
+                                        NYC...
+                                    </h5>
+                                </a>
+                                <div class="td-post-date">Jan 22, 2019</div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="sub-one-left col-lg-4 col-md-6 mt-lg-0 mt-md-5">
+                        <h6>Information</h6>
+                        <div class="columns-2 d-flex">
+                            <ul class="footer-sub-gd mr-5">
+                                <li><a href="#">Celebrities</a></li>
+                                <li><a href="#">Fashion</a></li>
+                                <li><a href="lifestyle.html">Lifestyle</a></li>
+                                <li><a href="#">Blog Page</a></li>
+                            </ul>
+                            <ul class="footer-sub-gd">
+                                <li><a href="#">Login</a></li>
+                                <li><a href="#">Signup</a></li>
+                                <li><a href="#">Author</a></li>
+                                <li><a href="#">Comments</a></li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
-                <!-- end: TOPBAR CONTAINER -->
-            </header>
-            <!-- end: TOPBAR -->
-            <!-- start: PAGE -->
-            <div class="main-content" id="ajax-content">
-
-                @RenderBody()
             </div>
-        </div>
+        </section>
+        <div class="below-section">
+            <div class="container">
+                <div class="copyright-footer text-center">
 
-
-        <!-- end: PAGE -->
-    </div>
-    <!-- end: MAIN CONTAINER -->
-    <!-- start: FOOTER -->
-    <footer class="inner">
-        <div class="footer-inner">
-            <div class="pull-left">
-                @DateTime.Now.Year &copy; Main Project
+                    <p>
+                        © 2020 Webzine. All rights reserved.| Design by
+                        <a href="http://w3layouts.com/" target="_blank">W3layouts</a>
+                    </p>
+                </div>
             </div>
-            <div class="pull-right text-right">
-                <span class="go-top pull-right"><i class="fa fa-chevron-up"></i></span>
-            </div>
-        </div>
-    </footer>
-    <!-- end: FOOTER -->
+            <!-- move top -->
+            <button onclick="topFunction()" id="movetop" title="Go to top">
+                <span class="fa fa-arrow-up" aria-hidden="true"></span>
+            </button>
+            <script>
+                // When the user scrolls down 20px from the top of the document, show the button
+                window.onscroll = function () {
+                    scrollFunction()
+                };
 
-    <script src="@Url.Content("~/Content/assets/plugins/jquery-ui/jquery-ui-1.10.2.custom.min.js")"></script>
-    <script src="@Url.Content("~/Content/assets/plugins/bootstrap/js/bootstrap.min.js")"></script>
-    <script src="@Url.Content("~/Content/assets/plugins/blockUI/jquery.blockUI.js")"></script>
-    <script src="@Url.Content("~/Content/assets/plugins/iCheck/jquery.icheck.min.js")"></script>
-    <script src="@Url.Content("~/Content/assets/plugins/moment/min/moment.min.js")"></script>
-    <script src="@Url.Content("~/Content/assets/plugins/perfect-scrollbar/src/jquery.mousewheel.js")"></script>
-    <script src="@Url.Content("~/Content/assets/plugins/perfect-scrollbar/src/perfect-scrollbar.js")"></script>
-    <script src="@Url.Content("~/Content/assets/plugins/bootbox/bootbox.min.js")"></script>
-    <script src="@Url.Content("~/Content/assets/plugins/jquery.scrollTo/jquery.scrollTo.min.js")"></script>
-    <script src="@Url.Content("~/Content/assets/plugins/ScrollToFixed/jquery-scrolltofixed-min.js")"></script>
-    <script src="@Url.Content("~/Content/assets/plugins/jquery.appear/jquery.appear.js")"></script>
-    <script src="@Url.Content("~/Content/assets/plugins/jquery-cookie/jquery.cookie.js")"></script>
-    <script src="@Url.Content("~/Content/assets/plugins/velocity/jquery.velocity.min.js")"></script>
-    <script src="@Url.Content("~/Content/assets/plugins/TouchSwipe/jquery.touchSwipe.min.js")"></script>
-    <!-- end: MAIN JAVASCRIPTS -->
-    <!-- start: JAVASCRIPTS REQUIRED FOR SUBVIEW CONTENTS -->
-    <script src="@Url.Content("~/Content/assets/plugins/owl-carousel/owl-carousel/owl.carousel.js")"></script>
-    <script src="@Url.Content("~/Content/assets/plugins/jquery-mockjax/jquery.mockjax.js")"></script>
-
-
-    <script src="@Url.Content("~/Content/assets/plugins/fullcalendar/fullcalendar/fullcalendar.min.js")"></script>
-    <script src="@Url.Content("~/Content/assets/plugins/bootstrap-switch/dist/js/bootstrap-switch.min.js")"></script>
-    <script src="@Url.Content("~/Content/assets/plugins/jquery.validate.min.js")"></script>
-    <script src="@Url.Content("~/Content/assets/plugins/bootstrap-fileupload/bootstrap-fileupload.min.js")"></script>
-    <script src="@Url.Content("~/Content/assets/plugins/DataTables/media/js/jquery.dataTables.min.js")"></script>
-    <script src="@Url.Content("~/Content/assets/plugins/DataTables/media/js/dataTables.fixedHeader.min.js")"></script>
-    <script src="@Url.Content("~/Content/assets/plugins/toggle/toggle.min.js")"></script>
-    <script src="@Url.Content("~/Content/assets/plugins/truncate/jquery.truncate.js")"></script>
-    <script src="@Url.Content("~/Content/assets/plugins/bootstrap-daterangepicker/daterangepicker.js")"></script>
-    <script src="@Url.Content("~/Content/assets/plugins/bootstrap-datepicker/js/bootstrap-datepicker.js")"></script>
-    <script src="@Url.Content("~/Content/assets/plugins/NepaliDatePick/nepali.datepicker.v2.1.min.js")"></script>
-    <script src="@Url.Content("~/Content/assets/plugins/summernote/dist/summernote.min.js")"></script>
-    <script src="@Url.Content("~/Content/assets/plugins/jquery-ui/jquery-ui-1.10.2.custom.min.js")"></script>
-    <script src="@Url.Content("~/Content/assets/plugins/jqueryFixedHeader/table-fixed-header.js")"></script>
-    <script src="@Url.Content("~/Content/assets/plugins/bootstrap-progressbar/bootstrap-progressbar.min.js")"></script>
-    <script src="@Url.Content("~/Content/assets/plugins/nvd3/lib/d3.v3.js")"></script>
-    <script src="@Url.Content("~/Content/assets/plugins/nvd3/nv.d3.min.js")"></script>
-
-
-    <script src="~/Content/assets/plugins/select2/select2helper.js"></script>
-    <script src="~/Content/assets/plugins/select2/select2.min.js"></script>
-    <script src="~/Content/assets/plugins/select2/en.js"></script>
-
-    <script src="@Url.Content("~/Scripts/form-wizard.js")"></script>
-    <script src="@Url.Content("~/Scripts/jquery.smartWizard.js")"></script>
-    <script src="@Url.Content("~/Content/assets/js/table-data.js")"></script>
-    <script src="@Url.Content("~/Content/assets/plugins/tableExport/tableExport.js")"></script>
-    <script src="@Url.Content("~/Content/assets/plugins/tableExport/jquery.base64.js")"></script>
-    <script src="@Url.Content("~/Content/assets/plugins/tableExport/html2canvas.js")"></script>
-    <script src="@Url.Content("~/Content/assets/plugins/sweetalert/lib/sweet-alert.min.js")"></script>
-    <script src="@Url.Content("~/Content/assets/plugins/tableExport/jspdf/libs/sprintf.js")"></script>
-    <script src="@Url.Content("~/Content/assets/plugins/tableExport/jspdf/jspdf.js")"></script>
-    <script src="@Url.Content("~/Content/assets/plugins/tableExport/jspdf/libs/base64.js")"></script>
-    <script src="@Url.Content("~/Content/assets/js/table-export.js")"></script>
-    <script src="@Url.Content("~/Content/assets/js/ui-modals.js")"></script>
-    <script src="@Url.Content("~/Content/assets/js/main.js")"></script>
-    <script src="@Url.Content("~/Content/assets/js/jquery.searchable-1.0.0.min.js")"></script>
-    <script src="@Url.Content("~/Scripts/startup.js?v=20210709")"></script>
-    <script src="@Url.Content("~/Scripts/CardRequest/CommonJS.js?v=20210709")"></script>
-
-    <!-- end: CORE JAVASCRIPTS  -->
-    <!--DMS-->
-    <link href="~/Content/dropzone.css" rel="stylesheet" />
-    <script src="~/Scripts/DMS/Miscellaneous.js"></script>
-    <script src="~/Scripts/DMS/dropzone.js"></script>
-    <script src="~/Scripts/bootstrap-timepicker.min.js"></script>
-    <script src="~/Scripts/IconPicker/bootstrap-iconpicker.min.js"></script>
-    <script src="~/Scripts/ToasterNotification/jquery.toaster.js"></script>
-    <script src="~/Scripts/TableEdit/jquery.tabledit.js"></script>
-    <script src="~/Scripts/PrintThis/printThis.js"></script>
-    <script src="~/Scripts/nepali.datepicker.v2.2/nepali.datepicker.v2.2.min.js"></script>
-    <script src="~/Scripts/DMS/ImageUpload.js"></script>
-    <script src="~/Content/assets/js/FaijanManualToaster.js"></script>
-    <!--DMS-->
-    <script src="@Url.Action("Config","JavaScript")"></script>
-
-    <link href="~/Content/DataTables/css/buttons.dataTables.min.css" rel="stylesheet" />
-    <link href="~/Content/DataTables/css/jquery.dataTables.min.css" rel="stylesheet" />
-    <script src="@Url.Content("~/Scripts/DataTables/jquery.dataTables.min.js")"></script>
-    <script src="@Url.Content("~/Scripts/DataTables/dataTables.buttons.min.js")"></script>
-    <script src="@Url.Content("~/Scripts/DataTables/buttons.flash.min.js")"></script>
-    <script src="@Url.Content("~/Scripts/DataTables/jszip.min.js")"></script>
-    <script src="@Url.Content("~/Scripts/DataTables/buttons.html5.min.js")"></script>
-    <script src="@Url.Content("~/Scripts/DataTables/buttons.print.min.js")"></script>
-    @*for password strength*@
-    <script src="~/Scripts/password_strength.js"></script>
-    <script src="~/Scripts/password_strength_lightweight.js"></script>
-
-    <script>
-        $(document).ready(function ($) {
-            $('#myPassword').strength_meter();
-        });
-    </script>
-
-    <script>
-        $(document).ready(function (e) {
-            $('.main-navigation-menu a[href="#"]').each(function (item, index) {
-                var hasIcon = $(this).find('.fa');
-                if (hasIcon.length == 0) { $(this).prepend('<i class="fa fa-folder"></a>'); }
-            });
-            $('.main-navigation-menu a[href!="#"]').each(function (item, index) {
-                var hasIcon = $(this).find('.fa');
-                if (hasIcon.length == 0) { $(this).prepend('<i class="fa fa-list"></a>'); }
-            });
-        });
-    </script>
-
-
-    <script>
-        function ReApplyDataTable($selector) {
-            $selector = $selector || '.dataTable';
-            oTable = $($selector).dataTable({
-                "aoColumnDefs": [{
-                    //"aTargets": [0]
-                }],
-                "oLanguage": {
-                    "sLengthMenu": "Show _MENU_ Rows",
-                    "sSearch": "",
-                    "oPaginate": {
-                        "sPrevious": "",
-                        "sNext": ""
+                function scrollFunction() {
+                    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                        document.getElementById("movetop").style.display = "block";
+                    } else {
+                        document.getElementById("movetop").style.display = "none";
                     }
-                },
-                "aaSorting": [[0, 'asc']],
-                // set the initial value
-                "iDisplayLength": 100,
-                "lengthMenu": [[10, 25, 50, 100, 500], [10, 25, 50, 100, 500]],
-                fixedHeader: true,
-                //for excel print
-                dom: 'Blfrtip',
-                buttons: [{
-                    extend: 'excelHtml5',
-                    customizeData: function (data) {
-                        for (var i = 0; i < data.body.length; i++) {
-                            for (var j = 0; j < data.body[i].length; j++) {
-                                data.body[i][j] = '\u200C' + data.body[i][j];
-                            }
-                        }
-                    },
-                    orientation: 'landscape'
-                }]
-            });
-            $('.dataTables_wrapper .dataTables_filter input').addClass("form-control input-sm").attr("placeholder", "Search");
-        }
-        var oTable;
-        $(document).ready(function () {
-            Main.init();
-            TableExport.init();
-            //UIModals.init();
-            // console.log('init...');
-            ReApplyDataTable();
-
-            $('.nepali-calendar').attr('readonly', 'readonly').nepaliDatePicker({
-
-                format: "yyyy-mm-dd",
-                npdMonth: true,
-                npdYear: true,
-                npdYearCount: 50
-            });
-            applySelect();
-
-            //$('#cmdPrint, .cmdPrint').on('click', function (e) {
-            //    e.preventDefault();
-            //    window.print();
-            //});
-            $('#NepDate').on('mouseover', function (e) {
-                e.preventDefault();
-
-                $("#EngDate").toggle();
-
-            });
-            $('#NepDate').on('mouseout', function (e) {
-                e.preventDefault();
-
-                $("#EngDate").toggle();
-
-            });
-
-
-
-            $('.summernote').each(function () {
-                var _thisNote = $(this);
-                $(this).summernote({
-                    height: 300,
-                    tabsize: 2,
-                    oninit: function () {
-                        if (_thisNote.code() == "" || _thisNote.code().replace(/(<([^>]+)>)/ig, "") == "") {
-                            _thisNote.code(_thisNote.attr("placeholder"));
-                        }
-                    },
-                    onfocus: function (e) {
-                        if (_thisNote.code() == _thisNote.attr("placeholder")) {
-                            _thisNote.code("");
-                        }
-                    },
-                    onblur: function (e) {
-                        if (_thisNote.code() == "" || _thisNote.code().replace(/(<([^>]+)>)/ig, "") == "") {
-                            _thisNote.code(_thisNote.attr("placeholder"));
-                        }
-                    }
-                });
-            });
-
-        });
-
-    </script>
-
-    @RenderSection("Scripts", false)
-
-    <script>
-        $.validator.setDefaults({
-            ignore: ""
-        });
-
-        //for menu
-        $(document).ready(function () {
-            // Code for Current Active Page to open node at left
-
-            var hjref = $(location).attr('href');
-            // console.log("Current Address of Active page" + hjref);
-            var pathname = $(location).attr('pathname');
-            //console.log("Current Path of Active page" + pathname);
-
-            $found = false;
-            $('.sub-menu li a').each(function (e) {
-                var hrefl = $(this).attr('href');
-                if (pathname == hrefl && $found == false) {
-                    $found = true;
-                    $(this).addClass("active");
-
-                    $parent = $(this).parents('li');
-                    $parent = $($parent.get().reverse());
-                    $parent.each(function () {
-                        console.log($(this));
-                        //$(this).find('> a').trigger('click'); //.addClass('open')
-                        $(this).addClass('open').children('ul').slideDown(5, function () {
-                            if (mainNavigation.height() > $(".main-navigation-menu").outerHeight()) {
-                                mainNavigation.scrollTo(0, 5, {
-                                    onAfter: function () {
-                                        if ($body.hasClass("isMobile") == false) {
-                                            mainNavigation.perfectScrollbar('update');
-                                        }
-                                    }
-                                });
-                            } else {
-                                mainNavigation.scrollTo($(this).parent("li"), 5, {
-                                    onAfter: function () {
-                                        if ($body.hasClass("isMobile") == false) {
-                                            mainNavigation.perfectScrollbar('update');
-                                        }
-                                    }
-                                });
-                            }
-                        });
-                    })
                 }
-            });
 
-            var openMenu = "@ViewBag.MenuID";
-            console.log(openMenu);
-
-            $('.trigOnLoad').each(function (item, index) {
-                $(this).trigger('click');
-            });
-        });
-        $(document).ready(function () {
-            $('.table-fixed-header').fixedHeader();
-        });
+                // When the user clicks on the button, scroll to the top of the document
+                function topFunction() {
+                    document.body.scrollTop = 0;
+                    document.documentElement.scrollTop = 0;
+                }
+            </script>
+            <!-- /move top -->
+        </div>
+        <!-- copyright -->
 
 
-        $('.datepicker').attr('readonly', 'readonly').datepicker({
-            format: 'yyyy-mm-dd',
-            //"setDate": new Date(),
-            "autoclose": true
-            //startDate: '-3d'
-        });
-       //.datepicker("setDate", '1d');
-    </script>
 
+    </footer>
+    <!--//footer-66 -->
+    <!-- /footer end-->
 </body>
 <!-- end: BODY -->
-
 </html>

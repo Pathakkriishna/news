@@ -31,7 +31,6 @@ namespace DMS.DAL.DatabaseContext
         public virtual DbSet<des01designations> des01designations { get; set; }
         public virtual DbSet<emp01employee> emp01employee { get; set; }
         public virtual DbSet<lvl01employee_levels> lvl01employee_levels { get; set; }
-        public virtual DbSet<tbl_employee> tbl_employee { get; set; }
         public virtual DbSet<UserCode> UserCodes { get; set; }
         public virtual DbSet<usr05users> usr05users { get; set; }
     }
