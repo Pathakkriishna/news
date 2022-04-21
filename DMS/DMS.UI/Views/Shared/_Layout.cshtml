@@ -76,9 +76,9 @@ Author URL: http://w3layouts.com
                                             <div class="quick-links-side gap-top">
                                                 <h3 class="side-title">Categories</h3>
                                                 <ul>
-                                                    <li><a href="index.html">Home</a></li>
-                                                    <li><a href="lifestyle.html">Lifestyle</a></li>
-                                                    <li><a href="contact.html">Contact Us</a></li>
+                                                    <li><a href="@Url.Action("Index","Home") ">Home</a></li>
+                                                    <li><a href="@Url.Action("Lifestyle","Home")">Lifestyle</a></li>
+                                                    <li><a href="@Url.Action("Contact","Home")">Contact Us</a></li>
                                                     <li><a href="#">Author</a></li>
                                                 </ul>
                                             </div>
@@ -165,19 +165,19 @@ Author URL: http://w3layouts.com
                                         Home
                                     </a>
                                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                        <a class="dropdown-item" href="index.html">Home</a>
+                                        <a class="dropdown-item" href="@Url.Action("Index","Home")">Home</a>
                                         <a class="dropdown-item" href="home-1.html">Home V1</a>
                                     </div>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="lifestyle.html">Lifestyle</a>
+                                    <a class="nav-link" href="@Url.Action("Lifestyle","Home")">Lifestyle</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" href="#">Food</a>
                                 </li>
 
                                 <li class="nav-item">
-                                    <a class="nav-link" href="contact.html">Contact</a>
+                                    <a class="nav-link" href="@Url.Action("Contact","Home")">Contact</a>
                                 </li>
                             </ul>
                             <div class="social-right">

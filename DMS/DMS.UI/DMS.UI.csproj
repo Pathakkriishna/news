@@ -303,6 +303,7 @@
     <Compile Include="App_Start\UnityMvcActivator.cs" />
     <Compile Include="App_Start\UserManagement.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\adminController.cs" />
     <Compile Include="Controllers\Main\AccountController.cs" />
     <Compile Include="Controllers\Base\BaseControllerV1Controller.cs" />
     <Compile Include="Controllers\Base\_BaseAuthenticatedController.cs" />
@@ -390,6 +391,47 @@
     <Compile Include="ViewModels\VMEmail\VMBaseEmailFormat.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\admin\css\style-starter.css" />
+    <Content Include="Content\admin\fonts\fontawesome-webfont.svg" />
+    <Content Include="Content\admin\images\avatar1.jpg" />
+    <Content Include="Content\admin\images\avatar2.jpg" />
+    <Content Include="Content\admin\images\avatar3.jpg" />
+    <Content Include="Content\admin\images\avatar4.jpg" />
+    <Content Include="Content\admin\images\avatar5.jpg" />
+    <Content Include="Content\admin\images\avatar6.jpg" />
+    <Content Include="Content\admin\images\avatar7.jpg" />
+    <Content Include="Content\admin\images\cart.jpg" />
+    <Content Include="Content\admin\images\content.jpg" />
+    <Content Include="Content\admin\images\dashboard.jpg" />
+    <Content Include="Content\admin\images\desk.jpg" />
+    <Content Include="Content\admin\images\down.png" />
+    <Content Include="Content\admin\images\logo.png" />
+    <Content Include="Content\admin\images\people1.jpg" />
+    <Content Include="Content\admin\images\people2.jpg" />
+    <Content Include="Content\admin\images\people3.jpg" />
+    <Content Include="Content\admin\images\people4.jpg" />
+    <Content Include="Content\admin\images\Preloader_11.gif" />
+    <Content Include="Content\admin\images\profileimg-big.jpg" />
+    <Content Include="Content\admin\images\profileimg.jpg" />
+    <Content Include="Content\admin\images\sort_asc.png" />
+    <Content Include="Content\admin\images\sort_both.png" />
+    <Content Include="Content\admin\images\sort_desc.png" />
+    <Content Include="Content\admin\images\team.jpg" />
+    <Content Include="Content\admin\images\team2.jpg" />
+    <Content Include="Content\admin\images\team3.jpg" />
+    <Content Include="Content\admin\images\team4.jpg" />
+    <Content Include="Content\admin\images\template1.jpg" />
+    <Content Include="Content\admin\images\template2.jpg" />
+    <Content Include="Content\admin\js\bar.js" />
+    <Content Include="Content\admin\js\bootstrap.min.js" />
+    <Content Include="Content\admin\js\Chart.min.js" />
+    <Content Include="Content\admin\js\jquery-1.10.2.min.js" />
+    <Content Include="Content\admin\js\jquery-3.3.1.min.js" />
+    <Content Include="Content\admin\js\jquery.nicescroll.js" />
+    <Content Include="Content\admin\js\linechart.js" />
+    <Content Include="Content\admin\js\modernizr.js" />
+    <Content Include="Content\admin\js\scripts.js" />
+    <Content Include="Content\admin\js\utils.js" />
     <Content Include="Content\assets\css\chart_thamel.css" />
     <Content Include="Content\assets\css\custom.min.css" />
     <Content Include="Content\assets\css\FaijanManualToaster.css" />
@@ -1155,6 +1197,11 @@
     <Content Include="Content\news_portal\fonts\fontawesome-webfont.woff" />
     <Content Include="Content\news_portal\fonts\fontawesome-webfont.woff2" />
     <Content Include="Content\news_portal\fonts\FontAwesome.otf" />
+    <Content Include="Content\admin\fonts\fontawesome-webfont.eot" />
+    <Content Include="Content\admin\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Content\admin\fonts\fontawesome-webfont.woff" />
+    <Content Include="Content\admin\fonts\fontawesome-webfont.woff2" />
+    <Content Include="Content\admin\fonts\FontAwesome.otf" />
     <None Include="Properties\PublishProfiles\card_mgmt.pubxml" />
     <None Include="Properties\PublishProfiles\CustomProfile.pubxml" />
     <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
@@ -1443,6 +1490,7 @@
     <Content Include="Views\Maintenance\Index.cshtml" />
     <Content Include="Views\SystemUsers\RegisterUserEmployee.cshtml" />
     <Content Include="Views\Home\lifestyle.cshtml" />
+    <Content Include="Views\admin\adindex.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

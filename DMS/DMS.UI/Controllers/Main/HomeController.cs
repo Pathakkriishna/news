@@ -43,6 +43,11 @@ namespace DMS.Controllers
             return View();
         }
 
+        public ActionResult lifestyle()
+        {
+            return View();
+        }
+
         public ActionResult About()
         {
             ViewBag.Message = "Your application description page.";
