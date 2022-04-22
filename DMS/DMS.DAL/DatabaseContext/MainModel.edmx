@@ -96,6 +96,14 @@
           <Property Name="emp01updated_date_nep" Type="char" MaxLength="10" Nullable="false" />
           <Property Name="emp01update_date_eng" Type="datetime" Nullable="false" />
         </EntityType>
+        <EntityType Name="employee">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="name" Type="nvarchar" MaxLength="30" Nullable="false" />
+          <Property Name="address" Type="nvarchar" MaxLength="40" Nullable="false" />
+        </EntityType>
         <EntityType Name="lvl01employee_levels">
           <Key>
             <PropertyRef Name="lvl01uin" />
@@ -220,6 +228,7 @@
           <EntitySet Name="dep01department" EntityType="Self.dep01department" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="des01designations" EntityType="Self.des01designations" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="emp01employee" EntityType="Self.emp01employee" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="employee" EntityType="Self.employee" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="lvl01employee_levels" EntityType="Self.lvl01employee_levels" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="UserCodes" EntityType="Self.UserCodes" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="usr05users" EntityType="Self.usr05users" Schema="dbo" store:Type="Tables" />
@@ -258,6 +267,7 @@
           <EntitySet Name="dep01department" EntityType="BIT4thSemModel.dep01department" />
           <EntitySet Name="des01designations" EntityType="BIT4thSemModel.des01designations" />
           <EntitySet Name="emp01employee" EntityType="BIT4thSemModel.emp01employee" />
+          <EntitySet Name="employees" EntityType="BIT4thSemModel.employee" />
           <EntitySet Name="lvl01employee_levels" EntityType="BIT4thSemModel.lvl01employee_levels" />
           <EntitySet Name="UserCodes" EntityType="BIT4thSemModel.UserCode" />
           <EntitySet Name="usr05users" EntityType="BIT4thSemModel.usr05users" />
@@ -385,6 +395,14 @@
           <NavigationProperty Name="des01designations" Relationship="BIT4thSemModel.FK_emp01employee_des01designations" FromRole="emp01employee" ToRole="des01designations" />
           <NavigationProperty Name="lvl01employee_levels" Relationship="BIT4thSemModel.FK_emp01employee_lvl01employee_levels" FromRole="emp01employee" ToRole="lvl01employee_levels" />
           <NavigationProperty Name="usr05users" Relationship="BIT4thSemModel.FK_usr05users_emp01employee" FromRole="emp01employee" ToRole="usr05users" />
+        </EntityType>
+        <EntityType Name="employee">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="name" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="address" Type="String" Nullable="false" MaxLength="40" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityType Name="lvl01employee_levels">
           <Key>
@@ -605,6 +623,15 @@
                 <ScalarProperty Name="emp01des01uin" ColumnName="emp01des01uin" />
                 <ScalarProperty Name="emp01code" ColumnName="emp01code" />
                 <ScalarProperty Name="emp01uin" ColumnName="emp01uin" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="employees">
+            <EntityTypeMapping TypeName="BIT4thSemModel.employee">
+              <MappingFragment StoreEntitySet="employee">
+                <ScalarProperty Name="address" ColumnName="address" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="id" ColumnName="id" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

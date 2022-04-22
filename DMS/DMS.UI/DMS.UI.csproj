@@ -1491,6 +1491,7 @@
     <Content Include="Views\SystemUsers\RegisterUserEmployee.cshtml" />
     <Content Include="Views\Home\lifestyle.cshtml" />
     <Content Include="Views\admin\adindex.cshtml" />
+    <Content Include="Views\Shared\EditorTemplates\adlayout.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

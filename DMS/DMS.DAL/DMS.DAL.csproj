@@ -138,6 +138,9 @@
     <Compile Include="DatabaseContext\emp01employee.cs">
       <DependentUpon>MainModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="DatabaseContext\employee.cs">
+      <DependentUpon>MainModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="DatabaseContext\lvl01employee_levels.cs">
       <DependentUpon>MainModel.tt</DependentUpon>
     </Compile>
