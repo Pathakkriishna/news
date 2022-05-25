@@ -1065,6 +1065,7 @@
     <Content Include="Content\news_portal\images\admin.jpg" />
     <Content Include="Content\news_portal\images\author1.jpg" />
     <Content Include="Content\news_portal\images\author2.jpg" />
+    <Content Include="Content\news_portal\images\balen.jpg" />
     <Content Include="Content\news_portal\images\ban-grid1.jpg" />
     <Content Include="Content\news_portal\images\ban-grid2.jpg" />
     <Content Include="Content\news_portal\images\ban-grid3.jpg" />
@@ -1091,7 +1092,6 @@
     <Content Include="Content\news_portal\images\grid18.jpg" />
     <Content Include="Content\news_portal\images\grid19.jpg" />
     <Content Include="Content\news_portal\images\grid2.jpg" />
-    <Content Include="Content\news_portal\images\grid20.jpg" />
     <Content Include="Content\news_portal\images\grid3.jpg" />
     <Content Include="Content\news_portal\images\grid4.jpg" />
     <Content Include="Content\news_portal\images\grid5.jpg" />
@@ -1192,16 +1192,16 @@
     <Content Include="Content\assets\css\fonts\raleway\raleway-regular-webfont.ttf" />
     <Content Include="Content\assets\css\fonts\raleway\raleway-regular-webfont.woff" />
     <Content Include="Content\assets\css\fonts\raleway\raleway-regular-webfont.woff2" />
-    <Content Include="Content\news_portal\fonts\fontawesome-webfont.eot" />
-    <Content Include="Content\news_portal\fonts\fontawesome-webfont.ttf" />
-    <Content Include="Content\news_portal\fonts\fontawesome-webfont.woff" />
-    <Content Include="Content\news_portal\fonts\fontawesome-webfont.woff2" />
-    <Content Include="Content\news_portal\fonts\FontAwesome.otf" />
     <Content Include="Content\admin\fonts\fontawesome-webfont.eot" />
     <Content Include="Content\admin\fonts\fontawesome-webfont.ttf" />
     <Content Include="Content\admin\fonts\fontawesome-webfont.woff" />
     <Content Include="Content\admin\fonts\fontawesome-webfont.woff2" />
     <Content Include="Content\admin\fonts\FontAwesome.otf" />
+    <Content Include="Content\news_portal\fonts\fontawesome-webfont.eot" />
+    <Content Include="Content\news_portal\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Content\news_portal\fonts\fontawesome-webfont.woff" />
+    <Content Include="Content\news_portal\fonts\fontawesome-webfont.woff2" />
+    <Content Include="Content\news_portal\fonts\FontAwesome.otf" />
     <None Include="Properties\PublishProfiles\card_mgmt.pubxml" />
     <None Include="Properties\PublishProfiles\CustomProfile.pubxml" />
     <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
