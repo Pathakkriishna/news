@@ -304,6 +304,7 @@
     <Compile Include="App_Start\UserManagement.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\adminController.cs" />
+    <Compile Include="Controllers\galleryController.cs" />
     <Compile Include="Controllers\Main\AccountController.cs" />
     <Compile Include="Controllers\Base\BaseControllerV1Controller.cs" />
     <Compile Include="Controllers\Base\_BaseAuthenticatedController.cs" />
@@ -318,6 +319,7 @@
     <Compile Include="Controllers\MenuRoleUserAdmin\MenuController.cs" />
     <Compile Include="Controllers\MenuRoleUserAdmin\UserRoleController.cs" />
     <Compile Include="Controllers\Main\SystemUsersContoller.cs" />
+    <Compile Include="Controllers\recentNewsController.cs" />
     <Compile Include="CustomAttributes\AllowTopUsersAttribute.cs" />
     <Compile Include="CustomAttributes\HangFireAuthorizationFilter.cs" />
     <Compile Include="Extensions\ControllerExtensions.cs" />
@@ -1492,6 +1494,8 @@
     <Content Include="Views\Home\lifestyle.cshtml" />
     <Content Include="Views\admin\adindex.cshtml" />
     <Content Include="Views\Shared\EditorTemplates\adlayout.cshtml" />
+    <Content Include="Views\recentNews\recentNewPage.cshtml" />
+    <Content Include="Views\gallery\newsPage.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

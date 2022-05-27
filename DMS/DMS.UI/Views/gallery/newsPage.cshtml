@@ -1,0 +1,56 @@
+﻿@model List<DMS.DAL.newDatabase.recentNew>
+@{
+    ViewBag.Title = "newsPage";
+}
+
+
+<html>
+<head>
+    <title>Page</title>
+    <style>
+        .mainDiv {
+            height: 400px;
+            width: 100%;
+            background-color: palevioletred;
+            display: flex;
+        }
+
+        .box {
+            height: 350px;
+            width: 25%;
+            background-color: gray;
+            margin-top: 10px;
+            margin-left: 10px;
+        }
+
+            .box p {
+                color: white;
+            }
+
+            .box img {
+                height: 100px;
+                width: 100px;
+            }
+    </style>
+</head>
+
+<body>
+    <div class="mainDiv">
+
+        @foreach (var data in Model)
+        {
+            <div class="box">
+                <img src="@(data.picture)" alt="img" />
+                <p>@data.pictureDescription</p>
+                <p>@(data.pictureDate)</p>
+                <p>@(data.description)</p>
+                <p>@(data.date)</p>
+                <p>@(data.news)</p>
+            </div>
+
+        }
+
+    </div>
+</body>
+</html>
+
