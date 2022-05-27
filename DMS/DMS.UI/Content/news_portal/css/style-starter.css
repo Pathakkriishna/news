@@ -4873,7 +4873,7 @@ h2.hny-food-title {
   line-height: 28px;
 }
 
-.w3l-mag-main .maghny-grid figure h4.top-text {
+.w3l-mag-main .maghny-grid figure h5.top-text {
   font-size: 20px;
   line-height: 28px;
 }
@@ -8712,8 +8712,8 @@ mark,
 }
 
 .img-fluid {
-  max-width: 100%;
-  height: auto;
+   width: 100%;
+    height: auto;
 }
 
 .img-thumbnail {

@@ -9,7 +9,7 @@ namespace DMS.Controllers
     public class adminController : Controller
     {
         // GET: admin
-        [AllowAnonymous]
+       
         public ActionResult adindex()
         {
             return View();
